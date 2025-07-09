@@ -5,6 +5,7 @@ import Adminsignup from './components/adminsignup'
 import Adminsignin from './components/adminsignin'
 import Usersignup from './components/usersignup'
 import Usersignin from './components/usersignin'
+import Admindash from './components/admindash'
 
 function App() {
   

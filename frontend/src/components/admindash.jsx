@@ -1,3 +1,7 @@
 export default function Admindash(){
-    return
+    return(
+        <div>
+            
+        </div>
+    )
 }

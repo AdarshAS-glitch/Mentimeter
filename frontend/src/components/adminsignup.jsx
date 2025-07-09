@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import axios from "axios";
 export default function Adminsignup() {
     const navigate=useNavigate();
     const handlesignup=()=>{
