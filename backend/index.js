@@ -221,12 +221,6 @@ app.get('/userquiz/result/:id', async (req, res) => {
             quizid, userid, result
         }
     })
-    res.json({
-        Score: result
-    })
-})
-app.get('/leaderboard/:id', async (req, res) => {
-    const quizid = parseInt(req.params.id);
     const results = await prisma.result.findMany({
         where: { quizid }, include: {
             user: {
@@ -239,10 +233,15 @@ app.get('/leaderboard/:id', async (req, res) => {
             result: "desc"
         }
     })
-    res.json(results.map(r => ({
+    
+    res.json({
+        Score: result,
+        Leaderboard:(results.map(r => ({
         username: r.user.username,
         result: r.result
     })))
+    })
 })
+
 
 app.listen(3000)
