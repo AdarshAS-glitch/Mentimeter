@@ -1,0 +1,31 @@
+[[
+  {
+    "title": "JavaScript Basics",
+    "question": "What is closure?",
+    "option1": "Function inside a function",
+    "option2": "Loop block",
+    "option3": "Array method",
+    "option4": "None",
+    "answer": "Function inside a function"
+  },
+  {
+    "title": "JavaScript Basics",
+    "question": "What is '==='?",
+    "option1": "Strict equality",
+    "option2": "Loose equality",
+    "option3": "Assignment",
+    "option4": "Comparison",
+    "answer": "Strict equality"
+  }
+],
+[
+  {
+    "questionid": 1,
+    "response": "Function inside a function"
+  },
+  {
+    "questionid": 2,
+    "response": "Strict equality"
+  }
+]
+]
