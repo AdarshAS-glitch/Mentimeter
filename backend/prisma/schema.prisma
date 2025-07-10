@@ -14,53 +14,64 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 model Admin{
-id Int @id @default(autoincrement())
-username String @unique
+id String @id @default(uuid())
+name String 
+email String @unique
 password String
 quiz Quiz[]
 }
+model User {
+  id String @id @default(uuid())
+  name String 
+  email String @unique
+  password String
+  responses Responses[]
+  result Result[]
+}
 
 model Quiz{
-  id Int @id @default(autoincrement())
+  id String @id @default(uuid())
   title String
-  adminid Int
+  adminid String
   admin Admin @relation(fields: [adminid],references: [id])
   questions Questions[]
   result Result[]
 
 }
 model Questions{
-  id Int @id @default(autoincrement())
-  question String
+  id String @id @default(uuid())
+  title String
+  options Options[]
+  answer String
+  quizid String
+  quiz Quiz @relation(fields: [quizid],references: [id])
+  responses Responses[]
+}
+model Options{
+  id String @id @default(uuid())
   option1 String
   option2 String
   option3 String
   option4 String
-  answer String
-  quizid Int
-  quiz Quiz @relation(fields: [quizid],references: [id])
-  responses Responses[]
+  questionid String
+  questions Questions @relation(fields: [questionid],references: [id])
+
 }
-model User {
-  id Int @id @default(autoincrement())
-  username String @unique
-  password String
-  responses Responses[]
-  result Result[]
-}
+
 model Responses{
   id Int @id @default(autoincrement())
-  questionid Int
+  questionid String
   question Questions @relation(fields: [questionid],references: [id])
-  userid Int
+  userid String
   user User @relation(fields: [userid],references: [id])
   response String
 }
 model Result{
-  id Int @id @default(autoincrement())
-  quizid Int
-  userid Int
+  id String @id @default(uuid())
+  quizid String
+  userid String
   result Int
   quiz Quiz @relation(fields: [quizid],references: [id])
   user User @relation(fields: [userid],references: [id])
+  totalquestions Int
 }

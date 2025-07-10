@@ -8,11 +8,11 @@ export default function Adminsignin(){
     function handlesignin(){
         const username=document.getElementById("username").value;
         const password=document.getElementById("password").value;
-        axios.post("http://localhost:3000/signin",{
+        axios.post("http://localhost:3000/adminsignin",{
             username:username,
             password:password
         }).then(function(res){
-            localStorage.setItem("token",res.data.token)
+            localStorage.setItem("token",res.data)
             navigate('/adminquiz')
         })
         

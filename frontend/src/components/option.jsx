@@ -2,21 +2,16 @@ import { useNavigate } from "react-router"
 export default function Option(){
     const navigate=useNavigate();
     function adminsignin(){
-        navigate('/adminsignin')
+        navigate('/signin')
     }
-    function usersignin(){
-        navigate('/usersignin')
-    }
+   
     return(
         <div>
             <h1>
-                WHO ARE YOU?
+                Signin
             </h1>
             <button onClick={adminsignin}>
             Admin
-            </button>
-            <button onClick={usersignin}>
-            User
             </button>
         </div>
     )

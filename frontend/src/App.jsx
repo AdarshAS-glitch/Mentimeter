@@ -6,7 +6,7 @@ import Adminsignin from './components/adminsignin'
 import Usersignup from './components/usersignup'
 import Usersignin from './components/usersignin'
 import Admindash from './components/admindash'
-
+import Createquiz from './components/createquiz'
 function App() {
   
 
@@ -19,6 +19,7 @@ function App() {
       <Route path='/usersignup' element={<Usersignup></Usersignup>}></Route>
       <Route path='/usersignin' element={<Usersignin></Usersignin>}></Route>
       <Route path='/adminquiz' element={<Admindash></Admindash>}></Route>
+      <Route path='/admin/create' element={<Createquiz></Createquiz>}></Route>
     </Routes>
     </BrowserRouter>
 

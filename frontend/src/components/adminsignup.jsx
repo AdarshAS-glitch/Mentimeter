@@ -5,7 +5,7 @@ export default function Adminsignup() {
     const handlesignup=()=>{
         const username=document.getElementById("username").value;
         const password=document.getElementById("password").value;
-        axios.post("http://localhost:3000/signup",{
+        axios.post("http://localhost:3000/adminsignup",{
             username:username,
             password:password
         }).then(function(){

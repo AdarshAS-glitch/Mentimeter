@@ -27,5 +27,34 @@
     "questionid": 2,
     "response": "Strict equality"
   }
+],
+[
+  {
+    "title": "Python Basics Quiz",
+    "question": "What keyword is used to create a function in Python?",
+    "option1": "func",
+    "option2": "define",
+    "option3": "def",
+    "option4": "function",
+    "answer": "def"
+  },
+  {
+    "title": "Python Basics Quiz",
+    "question": "Which data type is used to store multiple items in a single variable?",
+    "option1": "int",
+    "option2": "list",
+    "option3": "float",
+    "option4": "bool",
+    "answer": "list"
+  },
+  {
+    "title": "Python Basics Quiz",
+    "question": "What is the output of `len('Python')`?",
+    "option1": "5",
+    "option2": "6",
+    "option3": "7",
+    "option4": "Error",
+    "answer": "6"
+  }
 ]
 ]
